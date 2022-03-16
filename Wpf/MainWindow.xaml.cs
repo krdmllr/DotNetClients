@@ -20,9 +20,22 @@ namespace Wpf
     /// </summary>
     public partial class MainWindow : Window
     {
+        public int CounterValue { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void myButton_Click(object sender, RoutedEventArgs e)
+        {
+            CounterValue++;
+            CounterTextBlock.Text = "Counter: " + CounterValue;
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextFieldValueBlock.Text = "Textfield value: " + ((TextBox)sender).Text;
         }
     }
 }

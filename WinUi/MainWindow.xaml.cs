@@ -23,14 +23,22 @@ namespace WinUi
     /// </summary>
     public sealed partial class MainWindow : Window
     {
+        public int CounterValue { get; set; }
+
         public MainWindow()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
         private void myButton_Click(object sender, RoutedEventArgs e)
         {
-            myButton.Content = "Clicked";
+            CounterValue++;
+            CounterTextBlock.Text = "Counter: " + CounterValue;
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextFieldValueBlock.Text = "Textfield value: " + ((TextBox)sender).Text;
         }
     }
 }
