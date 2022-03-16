@@ -1,4 +1,4 @@
-﻿using MauiBlazor.Data;
+﻿using Shared.Data;
 using Microsoft.AspNetCore.Components.WebView.Maui;
 
 namespace MauiBlazor
