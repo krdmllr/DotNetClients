@@ -4,11 +4,14 @@
              xmlns:local="clr-namespace:MauiBlazor"
              x:Class="MauiBlazor.MainPage"
              BackgroundColor="{DynamicResource PageBackgroundColor}">
-
-    <b:BlazorWebView HostPage="wwwroot/index.html">
-        <b:BlazorWebView.RootComponents>
-            <b:RootComponent Selector="#app" ComponentType="{x:Type local:Main}" />
-        </b:BlazorWebView.RootComponents>
-    </b:BlazorWebView>
+    <Grid RowDefinitions="Auto,*">
+        <Button Text="Click me!"></Button>
+        <b:BlazorWebView HostPage="wwwroot/index.html" Grid.Row="1">
+            <b:BlazorWebView.RootComponents>
+                <b:RootComponent Selector="#app" ComponentType="{x:Type local:Main}" />
+            </b:BlazorWebView.RootComponents>
+        </b:BlazorWebView>
+    </Grid>
+    
 
 </ContentPage>
