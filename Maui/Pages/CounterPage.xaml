@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maui.Pages.CounterPage"
+             Title="Counter"
+             BackgroundColor="White">
+    <StackLayout Margin="10">
+        <Label Text="Counter" FontSize="Large"/>
+        <Label Text="{Binding CounterValue, StringFormat='Current count: {0}'}" />
+        <Button Text="Click me" Command="{Binding IncrementCounterCommand}" />
+    </StackLayout>
+</ContentPage>

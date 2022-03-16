@@ -1,4 +1,6 @@
-﻿namespace Maui
+﻿using Maui.Pages;
+
+namespace Maui
 {
     public partial class App : Application
     {

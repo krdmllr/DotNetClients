@@ -1,4 +1,4 @@
-namespace MauiBlazor.Data
+namespace Shared.Data
 {
     public class WeatherForecast
     {
@@ -8,6 +8,6 @@ namespace MauiBlazor.Data
 
         public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 
-        public string Summary { get; set; }
+        public string? Summary { get; set; }
     }
 }
